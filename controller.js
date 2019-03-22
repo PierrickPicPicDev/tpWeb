@@ -12,6 +12,18 @@ function Pencil(ctx, drawing, canvas) {
 	new DnD(canvas, this);
 
 	// Implémentez ici les 3 fonctions onInteractionStart, onInteractionUpdate et onInteractionEnd
+	onInteractionStart = function () {
+		switch(this.currEditingMode) {
+			case editingMode.rect :
+			{
+				break;
+			}
+			case editingMode.line : {
+				
+				break;
+			}
+		}
+	}
 };
 
 
