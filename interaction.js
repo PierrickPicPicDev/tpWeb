@@ -13,16 +13,17 @@ function DnD(canvas, interactor) {
     var y = getMousePosition(canvas,evt).y;
     console.log("x : " + x + " y : " + y);
     press =  true;
+    interactor.onInteractionStart(this);
   }.bind(this);
 
    this.deplacement = function(evt) {
     if(press) {
-      interactor.onInteraction(this);
       var x = getMousePosition(canvas, evt).x;
       var y = getMousePosition(canvas,evt).y;
       console.log("x : " + x + " y : " + y);
       this.pos_final_x = x;
       this.pos_final_y = y;
+
     }
 
   }.bind(this);
